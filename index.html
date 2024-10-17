@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        
+        <div class="logo" >Recipe Finder</div>
+        <img src="recipe.png" height="50" width="100"/>
+        <ul>
+            <li><a href="#" onclick="showHome()">Home</a></li>
+            <li><a href="#" onclick="showFavorites()">Favorites</a></li>
+            <li><a href="#" onclick="toggleDarkMode()">Mode</a></li>
+        </ul>
+    </nav>
+    <main id="home-section">
+        <h1>Find Delicious Recipes</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for recipes...">
+            <button id="search-button">Search</button>
+        </div>
+        <select id="diet-select">
+            <option value="">All</option>
+            <option value="balanced">Balanced</option>
+            <option value="high-protein">High Protein</option>
+            <option value="low-carb">Low Carb</option>
+        </select>
+        <select id="health-select">
+            <option value="">All</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+            <option value="gluten-free">Gluten-Free</option>
+        </select>
+        <div id="recipe-container" class="recipe-grid"></div>
+    </main>
+    <section id="favorites-container" style="display: none;">
+        <h2>Your Favorite Recipes</h2>
+        <div id="favorites-list"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
